@@ -1,5 +1,4 @@
-from flask import Flask, request, render_template, redirect, jsonify, abort, make_response
-from math import floor
+from flask import Flask, request, redirect, jsonify, abort
 from sqlite3 import OperationalError
 import string
 import sqlite3
@@ -75,9 +74,9 @@ def post_short_url():
     else:
         url = original_url
         try:
-            return jsonify({'hash': check_if_url_in_db(url)})
+            return jsonify({'short_url': check_if_url_in_db(url)})
         except:
-            return jsonify({'hash': insert_into_db(url)})
+            return jsonify({'short_url': insert_into_db(url)})
 
 
 @app.route('/<short_url>')
