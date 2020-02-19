@@ -162,7 +162,6 @@ def post_short_url():
             return jsonify({'hash': insert_into_db(url)})
 
 
-
 @app.route('/<short_url>')
 def get_full_url(short_url):
     url = host  # fallback if no URL is found
