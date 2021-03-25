@@ -14,7 +14,7 @@ jsonschema==3.2.0
 MarkupSafe==1.1.1
 openapi-spec-validator==0.2.8
 pyrsistent==0.15.7
-PyYAML==5.3
+PyYAML==5.4
 requests==2.22.0
 six==1.14.0
 urllib3==1.25.8
